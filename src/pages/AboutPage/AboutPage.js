@@ -18,12 +18,12 @@ const IntroText = styled.p`
     color: #808080;
 `
 
-
 function AboutPage(){
 
     return (
         <section>
             <Header/>
+        
             <section className='container'>
 
                 <div class="flex flex-column">
