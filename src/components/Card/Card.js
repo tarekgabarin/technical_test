@@ -6,7 +6,7 @@ const Card = styled.div`
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
-    padding: 1em;
+    padding: 1.4em;
     opacity: 100%;
     box-shadow: 0px 2px 4px 0px;
     border-radius: 5px;
