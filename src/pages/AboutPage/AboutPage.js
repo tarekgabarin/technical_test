@@ -1,6 +1,7 @@
 import React  from 'react';
 import styled from 'styled-components';
 import Header from '../../components/Header/Header'
+import Card from '../../components/Card/Card'
 
 const Title = styled.span`
     text-align: center;
@@ -39,7 +40,13 @@ function AboutPage(){
                         </IntroText>   
                     </div>
 
-                    
+                    <div>
+
+                        <Card>
+                            
+                        </Card>
+
+                    </div>
 
 
                 </div>
