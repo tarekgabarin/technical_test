@@ -3,13 +3,13 @@ import React from 'react';
 import {useWindowSize} from '../../hooks/windowResize'
 
 const Card = styled.div`
-    padding: 1.4em;
+    padding: 1.250em 1.500em;
     opacity: 100%;
     box-shadow: 0px 2px 4px 0px;
     border-radius: 5px;
     background-color: #FFFF;
     @media screen and (min-width: 1024px) {
-    width: 40%;
+    width: 45%;
     /* &:first-child {
         margin-left: 1em
     }
@@ -28,13 +28,11 @@ const Card = styled.div`
 function CardContentDesktop ({props}) {
 
 
-    console.log('props in nestes is', props);
-
     return (
         <div className='flex flex-row'>
 
             <div>
-                <img src={props.image} alt=""/>
+                <img style={{objectFit: 'cover', width: '192px', height: '232px'}} src={props.image} alt=""/>
             </div>
 
             <div class="flex flex-column">
