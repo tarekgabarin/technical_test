@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React, {useState, useEffect}  from 'react';
 import styled from 'styled-components';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
@@ -59,6 +59,12 @@ function AboutPage(){
          }
     ]
 
+    const CardsJSX = teamMembers.map(item => {
+        return (
+            <Card image={item.image} name={item.name} info={item.info} role={item.role} ></Card>
+        )
+    })
+
     return (
         <section>
             <Header/>
@@ -80,10 +86,7 @@ function AboutPage(){
 
                     <div className='flex flex-row flex-wrap'>
 
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
+                        {CardsJSX}
 
                     </div>
 

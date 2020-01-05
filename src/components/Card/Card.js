@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
-
+import {useWindowSize} from '../../hooks/windowResize'
 
 const Card = styled.div`
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
     padding: 1.4em;
     opacity: 100%;
     box-shadow: 0px 2px 4px 0px;
@@ -26,13 +23,59 @@ const Card = styled.div`
     width: 90%;
     margin: 1em;
     }
- 
 `
+
+function CardContentDesktop ({props}) {
+
+
+    console.log('props in nestes is', props);
+
+    return (
+        <div className='flex flex-row'>
+
+            <div>
+                <img src={props.image} alt=""/>
+            </div>
+
+            <div class="flex flex-column">
+
+                <div>
+                    <h3>{props.name}</h3>
+                    <span>{props.role}</span>
+                    <p>{props.info}</p>
+                </div>
+
+                <div>
+                    <button>Click</button>
+                </div>
+
+            </div>
+
+        </div>
+    )
+}
+
+
+
+
 function CardComponent (props){
+
+    const [width] = useWindowSize();
+    const isMobile = width < 480;
+
+    console.log('props is', props);
+
+    ///const CardContext = React.createContext(props);
+
+    ///const CardContent = isMobile == true ?  :  CardContentDesktop()
+
+
 
     return (
         <Card>
-        
+            
+
+            <CardContentDesktop props={props} ></CardContentDesktop>
         </Card>
     )
 
