@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-///import PlaceholderImage from '../../utils/images/placeholder'
+
 
 const Card = styled.div`
     display: flex;
@@ -11,12 +11,28 @@ const Card = styled.div`
     box-shadow: 0px 2px 4px 0px;
     border-radius: 5px;
     background-color: #FFFF;
+    @media screen and (min-width: 1024px) {
+    width: 40%;
+    /* &:first-child {
+        margin-left: 1em
+    }
+    &:last-child {
+        margin-right: 1em
+    } */
+    margin: 1em;
+
+    }
+    @media screen and (max-device-width: 480px) and (orientation: portrait){
+    width: 90%;
+    margin: 1em;
+    }
+ 
 `
-function CardComponent (){
+function CardComponent (props){
 
     return (
         <Card>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, distinctio!</h1>
+        
         </Card>
     )
 
