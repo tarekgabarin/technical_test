@@ -37,9 +37,36 @@ const DesktopCardInfo = styled.div`
     -webkit-flex-direction: column;
     display: -webkit-flex;
     padding-left: 1.250em;
+    justify-content: space-between;
 `
 
-///const NameTitle = 
+const NameTitle = styled.span`
+    font-family: 'HelveticaNeue-Medium';
+    font-weight: "Medium";
+    font-size: 1.625em;
+    color: #FF6600;
+    margin-top: 0.375em;
+    margin-bottom: 0.600em;
+    line-height: 0.250em;
+    display: block;
+`
+
+const RoleTitle = styled.span`
+    font-family: 'HelveticaNeue-Medium';
+    font-weight: "Medium";
+    font-size: 1.000em;
+    color: #434343;
+`
+
+const HeaderTitle = styled.hr`
+    border-top: #FFFF;
+    border-bottom: 1px solid #FF6600;
+`
+const InfoText = styled.p`
+    font-family:  "Helvetica Neue";
+    font-size: 0.875em;
+`
+
 
 function CardContentDesktop ({props}) {
 
@@ -54,9 +81,13 @@ function CardContentDesktop ({props}) {
             <DesktopCardInfo>
 
                 <div>
-                    <h3>{props.name}</h3>
-                    <span>{props.role}</span>
-                    <p>{props.info}</p>
+                    <NameTitle>{props.name}</NameTitle>
+                    <RoleTitle>{props.role}</RoleTitle>
+                    <HeaderTitle/>
+
+                    <InfoText>
+                        {props.info}
+                    </InfoText>
                 </div>
 
                 <div>
