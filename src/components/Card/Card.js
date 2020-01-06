@@ -25,10 +25,13 @@ const Card = styled.div`
     }
 `
 
-const ImageProfile = styled.img`
+const ImageProfileDesktop = styled.img`
     object-fit: cover;
     width: 192px;
     height: 232px;
+`
+const ImageProfileMobile = styled.img`
+    object-fit: cover;
 `
 
 const DesktopCardInfo = styled.div`
@@ -75,7 +78,7 @@ function CardContentDesktop ({props}) {
         <div className='flex flex-row'>
 
             <div>
-                <ImageProfile src={props.image} alt=""/>
+                <ImageProfileDesktop src={props.image} alt=""/>
             </div>
 
             <DesktopCardInfo>
@@ -100,6 +103,31 @@ function CardContentDesktop ({props}) {
     )
 }
 
+function CardContentMobile({props}) {
+
+    return (
+        <div class="flex flex-column">
+
+                    <NameTitle>{props.name}</NameTitle>
+                    <RoleTitle>{props.role}</RoleTitle>
+                    <div>
+                    <HeaderTitle></HeaderTitle>
+                    </div>
+                    <ImageProfileMobile src={props.image} alt=""/>
+
+                    <InfoText>
+                        {props.info}
+                    </InfoText>                    
+                    
+                    
+
+
+        </div>
+
+    )
+
+}
+
 
 
 
@@ -107,20 +135,16 @@ function CardComponent (props){
 
     const [width] = useWindowSize();
     const isMobile = width < 480;
-
-    console.log('props is', props);
-
-    ///const CardContext = React.createContext(props);
-
-    ///const CardContent = isMobile == true ?  :  CardContentDesktop()
+    
+    const CardContent = isMobile === true ?  (<CardContentMobile props={props} />) : (<CardContentDesktop props={props} />)
 
 
 
     return (
         <Card>
             
-
-            <CardContentDesktop props={props} ></CardContentDesktop>
+            {CardContent}
+            
         </Card>
     )
 
