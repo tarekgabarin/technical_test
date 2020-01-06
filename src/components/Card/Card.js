@@ -25,6 +25,22 @@ const Card = styled.div`
     }
 `
 
+const ImageProfile = styled.img`
+    object-fit: cover;
+    width: 192px;
+    height: 232px;
+`
+
+const DesktopCardInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    display: -webkit-flex;
+    padding-left: 1.250em;
+`
+
+///const NameTitle = 
+
 function CardContentDesktop ({props}) {
 
 
@@ -32,10 +48,10 @@ function CardContentDesktop ({props}) {
         <div className='flex flex-row'>
 
             <div>
-                <img style={{objectFit: 'cover', width: '192px', height: '232px'}} src={props.image} alt=""/>
+                <ImageProfile src={props.image} alt=""/>
             </div>
 
-            <div class="flex flex-column">
+            <DesktopCardInfo>
 
                 <div>
                     <h3>{props.name}</h3>
@@ -47,7 +63,7 @@ function CardContentDesktop ({props}) {
                     <button>Click</button>
                 </div>
 
-            </div>
+            </DesktopCardInfo>
 
         </div>
     )
