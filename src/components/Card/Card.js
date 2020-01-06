@@ -10,19 +10,15 @@ const Card = styled.div`
     border-radius: 5px;
     background-color: #FFFF;
     @media screen and (min-width: 1024px) {
-    width: 45%;
-    /* &:first-child {
-        margin-left: 1em
-    }
-    &:last-child {
-        margin-right: 1em
-    } */
+    width: 40%;
     margin: 1em;
-
     }
     @media screen and (max-device-width: 480px) and (orientation: portrait){
     width: 90%;
     margin: 1em;
+    }
+    @media (min-width: 768px){
+        margin: 1em;
     }
 `
 
@@ -53,6 +49,9 @@ const NameTitle = styled.span`
     margin-bottom: 0.600em;
     line-height: 0.250em;
     display: block;
+    @media (min-width: 992px){
+        font-size: 1.325em;
+    }
 `
 
 const RoleTitle = styled.span`
