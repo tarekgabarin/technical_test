@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useWindowSize} from '../../hooks/windowResize'
+import Button from '../../components/Button/Button';
 
 const Card = styled.div`
     padding: 1.250em 1.500em;
@@ -94,7 +95,7 @@ function CardContentDesktop ({props}) {
                 </div>
 
                 <div>
-                    <button>Click</button>
+                    <Button>+ Read More</Button>
                 </div>
 
             </DesktopCardInfo>
@@ -119,7 +120,9 @@ function CardContentMobile({props}) {
                         {props.info}
                     </InfoText>                    
                     
-                    
+                    <div>
+                    <Button>+ Read More</Button>
+                    </div>
 
 
         </div>
@@ -135,7 +138,7 @@ function CardComponent (props){
 
     const [width] = useWindowSize();
     const isMobile = width < 480;
-    
+
     const CardContent = isMobile === true ?  (<CardContentMobile props={props} />) : (<CardContentDesktop props={props} />)
 
 
