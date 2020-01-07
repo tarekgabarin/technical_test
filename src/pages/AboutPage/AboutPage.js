@@ -27,13 +27,11 @@ const Footer = styled.div`
     width: 100%;
     margin-top: auto;
     position: fixed;
-        bottom: 0;
-        left: 0;
-   /* @media (min-width: 768px) {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-   } */
+    bottom: 0;
+    left: 0;
+   @media (min-width: 1200px) {
+       padding: 0.9rem 0em;
+   }
     height: 1.7rem;
     margin-right: 0!important;
 `
@@ -42,6 +40,7 @@ const FooterText = styled.span`
     color: #A7A7A7;
     font-family:  "Helvetica Neue";
     font-size: 0.750em;
+    margin-right: 3em;
 `
 
 function AboutPage(){

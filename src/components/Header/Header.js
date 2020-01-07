@@ -9,12 +9,19 @@ const Header = styled.div`
  text-align: left;
  margin-right: 0!important;
 `
+const Logo = styled.span`
+    font-size: 1.500em;
+    font-family: 'HelveticaNeue-Medium';
+    font-weight: "Medium";
+    color: #FF6600;
+`
+
 const HeaderComponent = () => {
     return (
     <Header>
-    <span>
-        Logo
-    </span>
+        <Logo>
+            Acuity
+        </Logo>
     </Header>
     )
 }
