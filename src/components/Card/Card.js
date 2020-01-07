@@ -9,7 +9,7 @@ const Card = styled.div`
     box-shadow: 0px 2px 4px 0px;
     border-radius: 5px;
     background-color: #FFFF;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) {
     width: 40%;
     margin: 1em;
     }
