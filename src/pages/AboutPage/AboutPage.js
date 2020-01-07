@@ -21,6 +21,25 @@ const IntroText = styled.p`
     margin-bottom: 2em;
 `
 
+const Footer = styled.footer`
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.30);
+    width: 100%;
+    margin-top: auto;
+   @media (min-width: 768px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+   }
+    height: 1.7rem;
+    text-align: right;
+`
+const FooterText = styled.span`
+    color: #A7A7A7;
+    font-family:  "Helvetica Neue";
+    font-size: 0.750em;
+`
+
 function AboutPage(){
 
     const teamMembers = [
@@ -94,6 +113,14 @@ function AboutPage(){
                 </div>
 
             </section>
+
+
+        <Footer>
+            <FooterText>
+                © 2019 AcuityAds. All rights reserved.
+            </FooterText>
+        </Footer>
+
         </section>
     )
 
