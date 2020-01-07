@@ -21,20 +21,24 @@ const IntroText = styled.p`
     margin-bottom: 2em;
 `
 
-const Footer = styled.footer`
+const Footer = styled.div`
     background: #FFFFFF;
     box-shadow: 0 0 2px 0 rgba(0,0,0,0.30);
     width: 100%;
     margin-top: auto;
-   @media (min-width: 768px) {
+    position: fixed;
+        bottom: 0;
+        left: 0;
+   /* @media (min-width: 768px) {
         position: fixed;
         bottom: 0;
         left: 0;
-   }
+   } */
     height: 1.7rem;
-    text-align: right;
+    margin-right: 0!important;
 `
 const FooterText = styled.span`
+    float: right;
     color: #A7A7A7;
     font-family:  "Helvetica Neue";
     font-size: 0.750em;
